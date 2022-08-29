@@ -77,7 +77,7 @@ git clone https://github.com/VaneCode/SpaceTravelers.git
  **Aneal Layrea**
 
 - GitHub: [@githubhandle](https://github.com/aneallaryea100)
-- Twitter: [@twitterhandle](https://twitter.com/BonitoNarvaez)
+- Twitter: [@twitterhandle]()
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/niianeal/)
 
 ## 🤝 Contributing
@@ -92,7 +92,6 @@ Give a ⭐️ if you like this project!
 
 - Hat tip to anyone whose code was used
 - Inspiration
-- Usman Suleiman Babakolo, whose design was used in this project.
 
 ## 📝 License
 
