@@ -1,5 +1,6 @@
 import { Link, NavLink } from 'react-router-dom';
 import planet from '../images/planet.png';
+import './Navbar.css';
 
 const Navbar = () => (
   <nav>
@@ -11,13 +12,13 @@ const Navbar = () => (
     </div>
     <ul>
       <li>
-        <NavLink to="/" className={({ isActive }) => (isActive ? 'rockets-link active-link' : 'none')}>Rockets</NavLink>
+        <NavLink exact activeClassName="active" to="/">Rockets</NavLink>
       </li>
       <li>
-        <NavLink to="/missions" className={({ isActive }) => (isActive ? 'missions-link active-link' : 'none')}>Missions</NavLink>
+        <NavLink exact activeClassName="active" to="/missions">Missions</NavLink>
       </li>
       <li>
-        <NavLink to="/profile" className={({ isActive }) => (isActive ? 'myprofile-link active-link' : 'none myprofile-none')}>My profile</NavLink>
+        <NavLink exact activeClassName="active" to="/profile">My profile</NavLink>
       </li>
     </ul>
   </nav>
