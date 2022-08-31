@@ -7,8 +7,7 @@ import axios from 'axios';
 // Action types
 const FETCHED_ROCKETS = '/spacetravelers/rockets/FETCHED_ROCKETS';
 
-// Create and export action creators
-
+// Create and export async action creators
 export const FetchedRockets = createAsyncThunk(FETCHED_ROCKETS, async () => {
   try {
     // const response = await fetch('https://api.spacexdata.com/v3/rockets');
@@ -18,9 +17,14 @@ export const FetchedRockets = createAsyncThunk(FETCHED_ROCKETS, async () => {
         id, rocket_name, description, flickr_images,
       } = rocket;
       return {
-        id, rocket_name, description, flickr_images, reserved: false,
+        id,
+        rocket_name,
+        description,
+        flickr_images,
+        reserved: false,
       };
     });
+    // const payload = response.data;
     return payload;
   } catch (err) {
     return err.message;
@@ -37,7 +41,17 @@ const initialState = {
 const reducerRockets = createSlice({
   name: 'rockets',
   initialState,
-  reducers: {},
+  reducers: {
+    HandledBookRocket: (state, action) => {
+      const newState = state.rockets.map((rocket) => {
+        if (rocket.id !== action.payload.rocket.id) {
+          return rocket;
+        }
+        return { ...rocket, reserved: !rocket.reserved };
+      });
+      return { ...state, rockets: newState };
+    },
+  },
   extraReducers(builder) {
     builder
       .addCase(FetchedRockets.pending, (state) => {
@@ -53,5 +67,8 @@ const reducerRockets = createSlice({
       });
   },
 });
+
+// Exports actions created automaticaly with createSlice
+export const { HandledBookRocket } = reducerRockets.actions;
 
 export default reducerRockets.reducer;
