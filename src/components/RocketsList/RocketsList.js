@@ -1,6 +1,8 @@
 // Import
 import { useSelector, shallowEqual, useDispatch } from 'react-redux/es/exports';
+import { useEffect } from 'react';
 import { FetchedRockets } from '../../redux/rockets/rockets';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Rocket from '../Rocket/Rocket';
 
 const RocketList = () => {
@@ -9,13 +11,16 @@ const RocketList = () => {
     (state) => state.rockets,
     shallowEqual,
   );
-  // console.log(rocketsList);
   // Dispatch the action to get the rockets from the API
   const dispatch = useDispatch();
-  dispatch(FetchedRockets());
+  useEffect(() => {
+    if (!rocketsStatus.rockets.length) {
+      dispatch(FetchedRockets());
+    }
+  });
   return (
     <>
-      <div>
+      <div className="d-flex flex-column" style={{ gap: '1rem' }}>
         {rocketsStatus.rockets.map((rocket) => (
           <Rocket
             key={rocket.id}
