@@ -1,0 +1,33 @@
+table,
+th,
+td {
+  border: 0.5px solid black;
+  border-collapse: collapse;
+}
+
+table {
+  width: 95%;
+  margin: 2rem;
+}
+
+.btnMember {
+  background-color: dodgerblue;
+  border: none;
+  padding: 0.5rem;
+  color: #ddd;
+  margin: 0 1rem;
+  display: flex;
+  justify-content: center;
+  width: 8rem;
+}
+
+.btnJoin {
+  background-color: white;
+  color: black;
+  border: 2px solid #e7e7e7;
+  margin: 0 0.5rem;
+  display: flex;
+  justify-content: center;
+  width: 7rem;
+  padding: 0.5rem 0;
+}
