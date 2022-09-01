@@ -10,7 +10,6 @@ const FETCHED_ROCKETS = '/spacetravelers/rockets/FETCHED_ROCKETS';
 // Create and export async action creators
 export const FetchedRockets = createAsyncThunk(FETCHED_ROCKETS, async () => {
   try {
-    // const response = await fetch('https://api.spacexdata.com/v3/rockets');
     const response = await axios.get('https://api.spacexdata.com/v3/rockets');
     const payload = response.data.map((rocket) => {
       const {
