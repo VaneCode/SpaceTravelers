@@ -1,0 +1,22 @@
+.brand {
+  color: #23272b;
+  text-decoration: none;
+  padding: 0;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.nonActive {
+  text-decoration: none;
+}
+
+.active {
+  text-decoration: underline;
+}
+
+.line {
+  width: 0.125rem;
+  height: 0.8rem;
+  margin: 1rem 0.3rem 0 0.3rem;
+  border: solid 1px #23272b;
+}
