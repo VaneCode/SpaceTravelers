@@ -1,0 +1,22 @@
+ul {
+  list-style: none;
+  display: flex;
+}
+
+ul li a {
+  text-decoration: none;
+  color: olivedrab;
+  padding: 10px 20px;
+  font-weight: bold;
+  margin: 0 1rem;
+}
+
+ul li a:hover {
+  background-color: limegreen;
+  color: #fff;
+}
+
+.active {
+  background-color: greenyellow;
+  color: #fff;
+}

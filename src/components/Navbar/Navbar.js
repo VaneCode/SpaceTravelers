@@ -1,5 +1,6 @@
 import { Link, NavLink } from 'react-router-dom';
 import planet from '../images/planet.png';
+import './Navbar.css';
 
 const Navbar = () => (
   <nav>

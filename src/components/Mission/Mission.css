@@ -1,0 +1,84 @@
+table,
+th,
+td,
+tr {
+  border: 0.5px solid gray;
+  border-collapse: collapse;
+}
+
+table {
+  width: 95%;
+  margin: 2rem;
+}
+
+.btnMember {
+  background-color: gray;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem;
+  color: white;
+  margin: 0 1rem;
+  display: flex;
+  justify-content: center;
+  width: 8rem;
+}
+
+.btnNotMember {
+  background-color: dodgerblue;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem;
+  color: white;
+  margin: 0 1rem;
+  display: flex;
+  justify-content: center;
+  width: 8rem;
+}
+
+.btnJoin {
+  color: grey;
+  border: 2px solid grey;
+  border-radius: 5px;
+  margin: 0.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  width: 7rem;
+  font-size: medium;
+  padding: 0.4rem;
+}
+
+.btnLeave {
+  background-color: white;
+  color: red;
+  border: 2px solid red;
+  margin: 0.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  width: 7rem;
+  padding: 0.5rem 0;
+  font-size: medium;
+  border-radius: 5px;
+}
+
+.nameHead {
+  font-weight: 900;
+  font-size: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
+
+.headTable {
+  text-align: left;
+  font-weight: 900;
+  font-size: 1.3rem;
+  padding: 0.4rem;
+}
+
+.madMax {
+  background-color: #f8f8f8;
+  padding: 0.4rem;
+}
