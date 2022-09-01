@@ -30,7 +30,10 @@ const Rocket = (props) => {
           <Card.Text style={{ textAlign: 'justify' }}>
             {rocket.description}
           </Card.Text>
-          <Button onClick={ReserveHandler}>
+          <Button
+            onClick={ReserveHandler}
+            variant={rocket.reserved ? 'outline-secondary' : 'primary'}
+          >
             {rocket.reserved ? 'Cancel Reservation' : 'Reserve Rockect'}
           </Button>
         </Card.Body>
