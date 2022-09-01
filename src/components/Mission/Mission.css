@@ -11,10 +11,23 @@ table {
 }
 
 .btnMember {
+  background-color: gray;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem;
+  color: white;
+  margin: 0 1rem;
+  display: flex;
+  justify-content: center;
+  width: 8rem;
+}
+
+.btnNotMember {
   background-color: dodgerblue;
   border: none;
+  border-radius: 5px;
   padding: 0.5rem;
-  color: #ddd;
+  color: white;
   margin: 0 1rem;
   display: flex;
   justify-content: center;
@@ -22,12 +35,41 @@ table {
 }
 
 .btnJoin {
-  background-color: white;
-  color: black;
-  border: 2px solid #e7e7e7;
+  color: grey;
+  border: 2px solid grey;
+  border-radius: 5px;
   margin: 0 0.5rem;
   display: flex;
   justify-content: center;
   width: 7rem;
   padding: 0.5rem 0;
+  font-size: medium;
+}
+
+.btnLeave {
+  background-color: white;
+  color: red;
+  border: 2px solid red;
+  margin: 0 0.5rem;
+  display: flex;
+  justify-content: center;
+  width: 7rem;
+  padding: 0.5rem 0;
+  font-size: medium;
+  border-radius: 5px;
+}
+
+.nameHead {
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+
+.headTable {
+  text-align: left;
+  font-weight: 900;
+  font-size: 1.3rem;
+}
+
+.madMax {
+  background-color: #f8f8f8;
 }
