@@ -1,7 +1,8 @@
 table,
 th,
-td {
-  border: 0.5px solid black;
+td,
+tr {
+  border: 0.5px solid gray;
   border-collapse: collapse;
 }
 
@@ -38,19 +39,19 @@ table {
   color: grey;
   border: 2px solid grey;
   border-radius: 5px;
-  margin: 0 0.5rem;
+  margin: 0.5rem 1rem;
   display: flex;
   justify-content: center;
   width: 7rem;
-  padding: 0.5rem 0;
   font-size: medium;
+  padding: 0.4rem;
 }
 
 .btnLeave {
   background-color: white;
   color: red;
   border: 2px solid red;
-  margin: 0 0.5rem;
+  margin: 0.5rem 1rem;
   display: flex;
   justify-content: center;
   width: 7rem;
@@ -61,15 +62,23 @@ table {
 
 .nameHead {
   font-weight: 900;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  border-top: none;
 }
 
 .headTable {
   text-align: left;
   font-weight: 900;
   font-size: 1.3rem;
+  padding: 0.4rem;
 }
 
 .madMax {
   background-color: #f8f8f8;
+  padding: 0.4rem;
 }
