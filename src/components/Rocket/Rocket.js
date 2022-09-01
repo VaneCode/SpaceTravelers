@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Card } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
 import { HandledBookRocket } from '../../redux/rockets/rockets';
+import './Rocket.css';
 
 const Rocket = (props) => {
   const dispatch = useDispatch();
@@ -28,6 +29,7 @@ const Rocket = (props) => {
             {rocket.rocket_name}
           </Card.Title>
           <Card.Text style={{ textAlign: 'justify' }}>
+            {rocket.reserved && <span className="flag">Reserved</span>}
             {rocket.description}
           </Card.Text>
           <Button
