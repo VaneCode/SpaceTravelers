@@ -25,7 +25,7 @@ const Mission = () => {
         </thead>
         <tbody className="tableBody">
           {missions.map((mission, index) => (
-            <tr key={mission.mission_id} className={(index + 1) % 2 === 0 && 'madMax'}>
+            <tr id={mission.id} className={(index + 1) % 2 === 0 && 'madMax'}>
               <td className="nameHead">{mission.mission_name}</td>
               <td>{mission.description}</td>
               <td>
