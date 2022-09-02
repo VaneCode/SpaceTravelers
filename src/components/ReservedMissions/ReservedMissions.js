@@ -3,22 +3,22 @@ import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import { useSelector, shallowEqual } from 'react-redux';
 
-const ReservedRockets = () => {
+const ReservedMissions = () => {
   // Get the list of rockets from the state
-  const rocketsStatus = useSelector((state) => state.rockets, shallowEqual);
+  const missionsStatus = useSelector((state) => state.missions, shallowEqual);
   // Get the reserved rockets
-  const reserved = rocketsStatus.rockets.filter((rocket) => rocket.reserved);
+  const joined = missionsStatus.mission.filter((mission) => mission.join);
   return (
     <Card style={{ width: '50%', border: 'none' }}>
-      <Card.Title>My rockets</Card.Title>
+      <Card.Title>My missions</Card.Title>
       <Card style={{ width: '100%', marginTop: '0.5rem' }}>
         <ListGroup variant="flush">
-          {reserved.length === 0 ? (
-            <ListGroup.Item>Not reserved rockets.</ListGroup.Item>
+          {joined.length === 0 ? (
+            <ListGroup.Item>Not joined missions.</ListGroup.Item>
           ) : (
-            reserved.map((rocket) => (
-              <ListGroup.Item key={rocket.id}>
-                {rocket.rocket_name}
+            joined.map((mission) => (
+              <ListGroup.Item key={mission.mission_id}>
+                {mission.mission_name}
               </ListGroup.Item>
             ))
           )}
@@ -28,4 +28,4 @@ const ReservedRockets = () => {
   );
 };
 
-export default ReservedRockets;
+export default ReservedMissions;

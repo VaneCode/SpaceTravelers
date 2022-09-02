@@ -1,5 +1,5 @@
 // Import
-import { useSelector, shallowEqual, useDispatch } from 'react-redux/es/exports';
+import { useSelector, shallowEqual, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { FetchedRockets } from '../../redux/rockets/rockets';
 import 'bootstrap/dist/css/bootstrap.min.css';

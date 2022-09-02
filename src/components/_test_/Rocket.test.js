@@ -1,26 +1,22 @@
-import { render } from '@testing-library/react';
 import { Provider } from 'react-redux';
-import { BrowserRouter as Router } from 'react-router-dom';
-import React from 'react';
+import TestRenderer from 'react-test-renderer';
 import store from '../../redux/configureStore';
 import Rocket from '../Rocket/Rocket';
 
-describe('Rocket component', () => {
-  test('Renders Rocket component', () => {
+describe('Rocket test', () => {
+  test('snapshot', () => {
     const rocket = {
       id: 1,
       rocket_name: 'Falcon1',
       description: 'Fake description',
-      flickr_images: 'https://api.spacexdata.com/v3/rockets',
+      flickr_images:
+        'https://farm1.staticflickr.com/929/28787338307_3453a11a77_b.jpg',
+      reserved: false,
     };
-    const tree = render(
-      <React.StrictMode>
-        <Provider store={store}>
-          <Router>
-            <Rocket rocket={rocket} />
-          </Router>
-        </Provider>
-      </React.StrictMode>,
+    const tree = TestRenderer.create(
+      <Provider store={store}>
+        <Rocket rocket={rocket} />
+      </Provider>,
     );
     expect(tree).toMatchSnapshot();
   });
