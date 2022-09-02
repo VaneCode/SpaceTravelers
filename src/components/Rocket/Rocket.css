@@ -1,0 +1,10 @@
+.flag {
+  letter-spacing: -0.18px;
+  padding: 0.02rem 0.5rem;
+  border-radius: 0.2rem;
+  margin-right: 0.5rem;
+  color: white;
+  background-color: #19a2b8;
+  font-weight: bold;
+  font-size: 0.7rem;
+}

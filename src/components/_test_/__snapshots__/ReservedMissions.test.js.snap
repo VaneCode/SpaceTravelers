@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Reserved missions test snapshot 1`] = `
+<div
+  className="card"
+  style={
+    Object {
+      "border": "none",
+      "width": "50%",
+    }
+  }
+>
+  <div
+    className="card-title h5"
+  >
+    My missions
+  </div>
+  <div
+    className="card"
+    style={
+      Object {
+        "marginTop": "0.5rem",
+        "width": "100%",
+      }
+    }
+  >
+    <div
+      className="list-group list-group-flush"
+      onKeyDown={[Function]}
+    >
+      <div
+        className="list-group-item"
+        data-rr-ui-event-key={null}
+        onClick={[Function]}
+      >
+        Not joined missions.
+      </div>
+    </div>
+  </div>
+</div>
+`;

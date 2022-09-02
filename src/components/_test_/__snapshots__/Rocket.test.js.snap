@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rocket test snapshot 1`] = `
+<div
+  className="row no-gutters"
+>
+  <div
+    className="col-auto"
+  >
+    <img
+      alt="Falcon1"
+      className="card-img img-fluid"
+      src="https://farm1.staticflickr.com/929/28787338307_3453a11a77_b.jpg"
+      style={
+        Object {
+          "height": "10rem",
+          "width": "15rem",
+        }
+      }
+    />
+  </div>
+  <div
+    className="col"
+  >
+    <div
+      className="card-body"
+    >
+      <div
+        className="h2 card-title h5"
+        style={
+          Object {
+            "marginBottom": "1rem",
+          }
+        }
+      >
+        Falcon1
+      </div>
+      <p
+        className="card-text"
+        style={
+          Object {
+            "textAlign": "justify",
+          }
+        }
+      >
+        Fake description
+      </p>
+      <button
+        className="btn btn-primary"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        Reserve Rockect
+      </button>
+    </div>
+  </div>
+</div>
+`;
