@@ -6,19 +6,12 @@ import './Mission.css';
 const Mission = () => {
   const missions = useSelector((state) => state.missions.mission);
   const dispatch = useDispatch();
-  const clickJoin = (e) => {
-    e.preventDefault();
-    const pad = {
-      type: 'joinMission',
-      payload: e.target.value,
-    };
-    dispatch(joinMission(e.target.value));
-    return pad;
-  };
 
   useEffect(() => {
-    if (!missions.lenght) dispatch(getMissionData());
-  }, []);
+    if (!missions.length) {
+      dispatch(getMissionData());
+    }
+  });
 
   return (
     <div>
@@ -37,7 +30,7 @@ const Mission = () => {
               <td>{mission.description}</td>
               <td>
                 <button
-                  type="submit"
+                  type="button"
                   className={mission.join ? 'btnNotMember' : 'btnMember'}
                 >
                   {mission.join ? 'ACTIVE MEMBER' : 'NOT A MEMBER'}
@@ -45,10 +38,9 @@ const Mission = () => {
               </td>
               <td>
                 <button
-                  type="submit"
+                  type="button"
                   className={mission.join ? 'btnLeave' : 'btnJoin'}
-                  onClick={clickJoin}
-                  value={mission.id}
+                  onClick={() => dispatch(joinMission({ mission }))}
                 >
                   {mission.join ? 'Leave Mission' : 'Join Mission'}
                 </button>
