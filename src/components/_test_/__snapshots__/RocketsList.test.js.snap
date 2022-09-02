@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rocket list test snapshot 1`] = `
+<div
+  className="d-flex flex-column"
+  style={
+    Object {
+      "gap": "1rem",
+    }
+  }
+/>
+`;

@@ -1,7 +1,7 @@
 // Import
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
-import { useSelector, shallowEqual } from 'react-redux/es/exports';
+import { useSelector, shallowEqual } from 'react-redux';
 
 const ReservedMissions = () => {
   // Get the list of rockets from the state
