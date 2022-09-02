@@ -8,27 +8,28 @@ const initialState = {
   loading: 'idle',
 };
 
-export const getMissionData = createAsyncThunk('./missions/getMissionItems', async () => {
-  const fetchMissions = await axios.get(url).catch((err) => err);
-  const missionData = fetchMissions.data;
-  const fetchAllMissions = missionData.map((mission) => ({
-    id: mission.mission_id,
-    mission_name: mission.mission_name,
-    description: mission.description,
-    join: false,
-  }));
-  return fetchAllMissions;
-});
+export const getMissionData = createAsyncThunk(
+  './missions/getMissionItems',
+  async () => {
+    const fetchMissions = await axios.get(url).catch((err) => err);
+    const missionData = fetchMissions.data;
+    const fetchAllMissions = missionData.map((mission) => ({
+      id: mission.mission_id,
+      mission_name: mission.mission_name,
+      description: mission.description,
+      join: false,
+    }));
+    return fetchAllMissions;
+  },
+);
 
 const missionSlice = createSlice({
   name: 'missions',
   initialState,
   reducers: {
     joinMission: (state, action) => {
-      console.log('boooz', state, action);
       const newMissionState = state.mission.map((missions) => {
-        if (missions.id !== action.payload) {
-          console.log(action.payload);
+        if (missions.id !== action.payload.mission.id) {
           return missions;
         }
         return { ...missions, join: !missions.join };
@@ -49,7 +50,6 @@ const missionSlice = createSlice({
       state.mission = action.error;
     },
   },
-
 });
 
 export const { joinMission } = missionSlice.actions;
