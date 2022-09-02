@@ -49,6 +49,7 @@ const Mission = () => {
                   className={mission.join ? 'btnLeave' : 'btnJoin'}
                   onClick={clickJoin}
                   value={mission.id}
+                  dear={mission.join}
                 >
                   {mission.join ? 'Leave Mission' : 'Join Mission'}
                 </button>

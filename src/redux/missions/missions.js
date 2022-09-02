@@ -25,8 +25,10 @@ const missionSlice = createSlice({
   initialState,
   reducers: {
     joinMission: (state, action) => {
+      console.log('boooz', state, action);
       const newMissionState = state.mission.map((missions) => {
         if (missions.id !== action.payload) {
+          console.log(action.payload);
           return missions;
         }
         return { ...missions, join: !missions.join };
