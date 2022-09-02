@@ -15,10 +15,6 @@
 - Redux
 - Axios
 
-## Preview
-
-<img src="https://drive.google.com/file/d/1X8LMtGxPIOhz9Ye92fEnWXoyD66zr5nP/view?usp=sharing" alt="preview"/>
-
 ## Live Demo
 
 [Live Demo Link](https://poetic-truffle-186148.netlify.app/)
