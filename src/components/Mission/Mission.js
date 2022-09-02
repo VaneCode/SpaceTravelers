@@ -1,4 +1,5 @@
 /* eslint-disable react/jsx-props-no-multi-spaces */
+/* eslint-disable react/react/no-unknown-property */
 import { useSelector, useDispatch } from 'react-redux';
 import React, { useEffect } from 'react';
 import { getMissionData, joinMission } from '../../redux/missions/missions';
